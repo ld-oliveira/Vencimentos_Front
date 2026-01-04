@@ -1,14 +1,14 @@
 import { Route, Routes, BrowserRouter} from "react-router-dom"
 
-import App from "../pages/App";
 import Form from "../pages/Form";
+import Home from "../pages/Home";
 
 
 function Router(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/cadastro" element={<Form />} />
             </Routes>    
         </BrowserRouter>

@@ -1,4 +1,4 @@
-import logo from "../assets/logo.ico";
+import logo from "../assets/logo.png";
 import "../styles/Header.scss";
 
 

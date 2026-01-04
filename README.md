@@ -1,75 +1,52 @@
-# React + TypeScript + Vite
+Projeto Vencimentos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema simples para controle de vencimento de produtos, voltado para estudo e prática de desenvolvimento full stack.
+O foco é cadastro de produtos, visualização de vencimentos próximos e aplicação de boas práticas desde o início.
 
-Currently, two official plugins are available:
+Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Controlar produtos e suas datas de validade, permitindo:
 
-## React Compiler
+Cadastro e edição de produtos
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Listagem e filtros
 
-Note: This will impact Vite dev & build performances.
+Visualização de produtos próximos do vencimento
 
-## Expanding the ESLint configuration
+Base sólida para futura evolução como SaaS
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Stack Tecnológica
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Frontend
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Vite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+TypeScript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Backend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+NestJS
+
+TypeScript
+
+Banco de Dados
+
+PostgreSQL
+
+Comunicação
+
+REST API
+
+Autenticação via JWT ou sessão
+
+Arquitetura Geral
+
+Frontend consome uma API REST autenticada
+
+Backend organizado por domínio
+
+Cada produto pertence a um usuário
+
+Estrutura preparada para crescer sem grandes refatorações
