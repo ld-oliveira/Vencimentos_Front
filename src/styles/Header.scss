@@ -1,0 +1,51 @@
+@use "./variables" as *;
+
+.Section-header{
+    background-color: $color-fundo;
+    color: $color-destaque;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+
+}
+
+.btn-header{
+    text-decoration: none;
+    background-color: $color-destaque;
+    color: $color-fundo;
+
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    filter: brightness(0.95);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+.logo-header{
+    max-width: 5rem;
+}

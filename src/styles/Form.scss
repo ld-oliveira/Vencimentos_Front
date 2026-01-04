@@ -1,0 +1,145 @@
+@use "./variables" as *;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $color-fundo;
+  color: $color-fonte;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+form {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+fieldset {
+  border: 1px solid rgba($color-fonte, 0.14);
+  background: rgba(white, 0.03);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+legend {
+  padding: 0 0.5rem;
+}
+
+h2 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+fieldset > div {
+  margin-top: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: rgba($color-fonte, 0.92);
+}
+
+input {
+  width: 100%;
+  height: 44px;
+  padding: 0 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba($color-fonte, 0.14);
+  background: rgba(white, 0.04);
+  color: $color-fonte;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+
+  &::placeholder {
+    color: rgba($color-fonte, 0.45);
+  }
+
+  &:hover {
+    border-color: rgba($color-fonte, 0.22);
+  }
+
+  &:focus {
+    border-color: rgba($color-destaque, 0.75);
+    box-shadow: 0 0 0 4px rgba($color-destaque, 0.14);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+input[type="number"] {
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+input[type="date"] {
+  padding-right: 0.75rem;
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0.9;
+    filter: invert(1);
+    cursor: pointer;
+  }
+}
+
+button {
+  margin-top: 1.25rem;
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 12px;
+  background: $color-destaque;
+  color: $color-fundo;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    filter: brightness(0.98);
+    box-shadow: 0 10px 22px rgba($color-destaque, 0.12);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba($color-destaque, 0.18);
+  }
+}
+
+@media (max-width: 520px) {
+  form {
+    margin: 1.25rem auto;
+  }
+
+  fieldset {
+    padding: 1rem 1rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
